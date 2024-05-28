@@ -12,6 +12,12 @@ func InitRouter() *gin.Engine {
 	r.Use(gin.Logger())
 	r.Use(gin.Recovery())
 
+	r.GET("/ping", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"message": "pong",
+		})
+	})
+
 	v1Group := r.Group("/api/v1")
 	{
 		v1Group.GET("/articles", v1.GetArticles)
