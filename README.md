@@ -6,7 +6,7 @@
 
 This example deploys a Golang - Gin server to ComputeSphere.
 
-> [NOTE]
+> [!NOTE]
 > This guide builds a Docker image for the provided sample code. Please note that the version `v0.0.1` used in the example is only for demonstration. You should replace it with a version that suits your specific setup and requirements.
 
 ## Prerequisites
