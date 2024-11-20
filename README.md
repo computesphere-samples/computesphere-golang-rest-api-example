@@ -41,7 +41,7 @@ This example deploys a Golang - Gin server to ComputeSphere.
     </details>
 
 3. Push the image to Docker Hub.
-    > [NOTE]
+    > [!NOTE]
     > Be sure to log in to Docker Hub and replace `[REPOSITORY]` with your Docker Hub username.
 
     ```bash
