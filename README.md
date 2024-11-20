@@ -79,7 +79,7 @@ This runs the server on `localhost:8000`.
 
 <!-- Add a link to the blog once published -->
 
-See our [guide](https://docs.computesphere.com) on how to deploy this project to ComputeSphere.
+See our [guide](https://docs.computesphere.com/docs/getting-started/quickstart/getting-started-with-golang) on how to deploy this project to ComputeSphere.
 
 <!-- Check if this is the right link to the dashboard -->
 
