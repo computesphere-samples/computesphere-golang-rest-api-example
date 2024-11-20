@@ -83,7 +83,7 @@ See our [guide](https://docs.computesphere.com) on how to deploy this project to
 
 <!-- Check if this is the right link to the dashboard -->
 
-<a href="https://console.computesphere.com"> <img src="assets/images/logo.svg" alt="ComputeSphere Logo"> </a>
+<a href="https://console.computesphere.com"> <img src="public/assets/logo.svg" alt="ComputeSphere Logo"> </a>
 
 ---
 [Explore ComputeSphere Documentation](https://docs.computesphere.com)
