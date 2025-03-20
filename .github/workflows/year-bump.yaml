@@ -47,3 +47,4 @@ jobs:
             github_token: ${{ steps.app-token.outputs.token }}
             message: "Update year in README"
             branch: main
+            rebase: true
