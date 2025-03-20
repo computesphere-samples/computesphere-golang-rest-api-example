@@ -12,7 +12,17 @@ jobs:
     update-year:
         runs-on: ubuntu-latest
         steps:
+        - name: Create GitHub App Token
+          uses: actions/create-github-app-token@v1
+          id: app-token
+          with:
+            app-id: ${{ secrets.COMPUTESPHERE_SAMPLES_BOT_GITHUB_APP_APP_ID }}
+            private-key: ${{ secrets.COMPUTESPHERE_SAMPLES_BOT_GITHUB_APP_CLIENT_PRIVATE_KEY }}
+
         - uses: actions/checkout@v4
+          with:
+            token: ${{ steps.app-token.outputs.token }}
+
         - name: Update year in README
           run: |
             # Flags:
@@ -33,13 +43,6 @@ jobs:
 
             CURRENT_YEAR=$(date +'%Y')
             sed -r -i "s/[0-9]{4}( ComputeSphere LLC. All Rights Reserved.)/${CURRENT_YEAR}\1/gi" README.md
-        
-        - name: Create GitHub App Token
-          uses: actions/create-github-app-token@v1
-          id: app-token
-          with:
-            app-id: ${{ secrets.COMPUTESPHERE_SAMPLES_BOT_GITHUB_APP_APP_ID }}
-            private-key: ${{ secrets.COMPUTESPHERE_SAMPLES_BOT_GITHUB_APP_CLIENT_PRIVATE_KEY }}
 
         - name: Commit and Push
           uses: actions-js/push@master
