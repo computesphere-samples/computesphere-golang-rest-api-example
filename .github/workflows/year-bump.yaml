@@ -46,7 +46,6 @@ jobs:
           with:
             github_token: ${{ steps.app-token.outputs.token }}
             message: "Update year in README"
-            branch: feat/year-bump
             force: true
             author_name: computesphere-bot
             author_email: computesphere-bot@users.noreply.github.com
