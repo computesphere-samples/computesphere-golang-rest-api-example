@@ -17,7 +17,7 @@ jobs:
           run: |
             # Flags:
             # -r                                         - flag is for extended regex
-            # -i                                         - flag is for in-place editing, meaning the file will be modified
+            # -i                                         - flag is for in-place editing, meaning the file will be modified. empty string is used as a backup file extension
             # -e                                         - means the next argument is the expression
             # Expression:
             # s/                                         - search and replace
@@ -33,7 +33,7 @@ jobs:
             # README.md                                  - file to be modified
 
             CURRENT_YEAR=$(date +'%Y')
-            sed -rie "s/[0-9]{4}( ComputeSphere LLC. All Rights Reserved.)/${CURRENT_YEAR}\1/gi" README.md
+            sed -ri '' -e "s/[0-9]{4}( ComputeSphere LLC. All Rights Reserved.)/${CURRENT_YEAR}\1/gi" README.md
         
         - name: Create GitHub App Token
           uses: actions/create-github-app-token@v1
@@ -47,3 +47,4 @@ jobs:
           with:
             github_token: ${{ steps.app-token.outputs.token }}
             message: "Update year in README"
+            branch: main
