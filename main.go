@@ -27,3 +27,5 @@ func main() {
 }
 
 // preview e2e: image-ref fix validation
+
+// re-trigger: DNS/route fix validation
