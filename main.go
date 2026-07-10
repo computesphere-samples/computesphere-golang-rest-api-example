@@ -31,3 +31,5 @@ func main() {
 // re-trigger prod preview
 
 // prod preview after billing active
+
+// preview after base manifest exists
