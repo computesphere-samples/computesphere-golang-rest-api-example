@@ -25,3 +25,5 @@ func main() {
 
 	server.ListenAndServe()
 }
+
+// preview e2e: image-ref fix validation
