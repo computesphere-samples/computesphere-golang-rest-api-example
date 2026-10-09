@@ -1,5 +1,5 @@
 <p align="right">
-    <a href="https://computesphere.com/"><img src="https://pepublicassets.blob.core.windows.net/public-assets/computesphere-favicon.svg" width="50px" /></a>
+    <a href="https://computesphere.com/"><img src=".github/assets/logo.svg" width="60" alt="ComputeSphere" /></a>
 </p>
 
 # ComputeSphere Golang Example
@@ -83,7 +83,14 @@ See our [guide](https://docs.computesphere.com/docs/getting-started/quickstart/g
 
 <!-- Check if this is the right link to the dashboard -->
 
-<a href="https://console.computesphere.com"> <img src="https://pepublicassets.blob.core.windows.net/public-assets/computesphere-full-logo.png" width="350px" alt="ComputeSphere Logo"> </a>
+<p>
+<a href="https://console.computesphere.com">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset=".github/assets/logo-full-dark.svg">
+    <img src=".github/assets/logo-full-light.svg" width="350" alt="ComputeSphere">
+  </picture>
+</a>
+</p>
 
 ---
 [Explore ComputeSphere Documentation](https://docs.computesphere.com)
