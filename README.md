@@ -57,7 +57,7 @@ This example deploys a Golang - Gin server to ComputeSphere.
     docker run -p 8000:8000 computesphere-golang-example:v0.0.1
     ```
 
-    This runs the server on `localhost:8080`.\
+    This runs the server on `localhost:8000`.\
     You can test the server by cURLing the `/ping` endpoint.
 
     ```bash
@@ -74,6 +74,8 @@ go run main.go
 ```
 
 This runs the server on `localhost:8000`.
+
+The app listens on the port in the `PORT` environment variable when it is set, and on 8000 when it isn't. ComputeSphere sets `PORT` to your service's port, so the app answers where the platform expects it.
 
 ## Deploy to ComputeSphere
 
