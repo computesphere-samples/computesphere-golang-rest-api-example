@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 	"net/http"
+	"os"
 	"time"
 
 	"computesphere.com/computesphere-golang-rest-api-example/pkg/logging"
@@ -14,7 +15,12 @@ func init() {
 }
 
 func main() {
-	endPoint := ":8000"
+	// The platform sets PORT to the service's port; 8000 when it isn't set.
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8000"
+	}
+	endPoint := ":" + port
 	server := &http.Server{
 		Addr:         endPoint,
 		Handler:      routers.InitRouter(),
